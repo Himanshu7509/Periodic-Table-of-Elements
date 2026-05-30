@@ -10,9 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@swc/helpers": "^0.5.23",
     "@tailwindcss/vite": "^4.3.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
+    "react-toggle-dark-mode": "^2.0.0",
     "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
