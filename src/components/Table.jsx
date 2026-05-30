@@ -22,7 +22,8 @@ export default function Table() {
     <ModalContext.Provider value={toggleModal}>
       <div className="py-4 px-4">
         <Modal open={open} toggleModal={toggleModal} modalData={modalData} />
-        table
+        
+
       </div>
     </ModalContext.Provider>
   );
