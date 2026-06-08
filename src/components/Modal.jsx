@@ -27,7 +27,7 @@ export default function Modal({ open, toggleModal, modalData }) {
         id="defaultModal"
         tabindex="-1"
         aria-hidden="true"
-        className={`fixed flex items-center justify-center ${modalOpen}  z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0  max-h-full`}
+        className={`fixed flex items-center justify-center ${modalOpen}  z-50  w-full p-2 md:p-4 overflow-x-hidden overflow-y-auto md:inset-0  max-h-full`}
         style={{
           backdropFilter: "brightness(0.7)",
           top: 0,
@@ -37,10 +37,10 @@ export default function Modal({ open, toggleModal, modalData }) {
           height: "100vh",
         }}
       >
-        <div className="relative w-full max-w-2xl max-h-full">
+        <div className="relative w-full max-w-2xl max-h-full mx-2 md:mx-0">
           <div className={`relative ${bgColor} rounded-lg shadow `}>
-            <div className="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-              <h3 className={`"text-xl font-semibold pl-4 ${fontColor} "`}>
+            <div className="flex items-start justify-between p-3 md:p-4 border-b rounded-t dark:border-gray-600">
+              <h3 className={`text-lg md:text-xl font-semibold pl-2 md:pl-4 ${fontColor} `}>
                 {name} ({symbol})
               </h3>
               <button
@@ -68,26 +68,26 @@ export default function Modal({ open, toggleModal, modalData }) {
               </button>
             </div>
 
-            <div className="p-6 space-y-6">
-              <p className={`text-base leading-relaxed ${fontColor}`}>
+            <div className="p-4 md:p-6 space-y-4 md:space-y-6">
+              <p className={`text-sm md:text-base leading-relaxed ${fontColor}`}>
                 {summary}
               </p>
 
-              <div className="flex">
+              <div className="flex flex-col md:flex-row gap-2 md:gap-4">
                 <Label>Atomic Mass: {atomic_mass}</Label>
                 <Label>Appearance: {appearance}</Label>
               </div>
-              <div className="flex">
+              <div className="flex flex-col md:flex-row gap-2 md:gap-4">
                 <Label>Category: {category}</Label>
                 <Label>Group: {group}</Label>
               </div>
             </div>
 
             <div
-              className={`flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 ${fontColor} `}
+              className={`flex flex-col md:flex-row items-center p-4 md:p-6 space-y-2 md:space-y-0 md:space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600 ${fontColor} `}
             >
-              Source:{" "}
-              <a href={source} className="pl-2 underline" target="_blank">
+              <span>Source:</span>
+              <a href={source} className="pl-0 md:pl-2 underline break-all" target="_blank">
                 {source}
               </a>
             </div>

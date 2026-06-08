@@ -14,10 +14,12 @@ function toggleDarkMode(){
     setIsDarkMode(prevState=> !prevState)
 }
 
-let bgColor = isDarkMode ? "bg-slate-800" : "bg-white"
+let bgColor = isDarkMode ? "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" : "bg-gradient-to-br from-slate-50 via-white to-slate-100"
+  let textColor = isDarkMode ? "text-white" : "text-slate-800"
+  
   return (
     <ThemeContext.Provider value={isDarkMode}>
-      <div className={`${bgColor} `}>
+      <div className={`${bgColor} min-h-screen transition-all duration-500 ease-in-out ${textColor}`}>
  
           <Header 
             toggleDarkMode={toggleDarkMode} />

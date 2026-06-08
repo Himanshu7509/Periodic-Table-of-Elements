@@ -4,8 +4,8 @@ export default function FifthRow({ data }){
     return(
         <div className="">
 
-            <div className="flex">
-                <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+            <div className="flex flex-col md:flex-row">
+                <div className="w-full md:w-1/2 md:grid md:grid-cols-9">
                   
                     <Element elementData={data[36]} />
                     <Element elementData={data[37]} />
@@ -17,7 +17,7 @@ export default function FifthRow({ data }){
                     <Element elementData={data[43]} />
                     <Element elementData={data[44]} />
                 </div>
-                <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+                <div className="w-full md:w-1/2 md:grid md:grid-cols-9">
                     
                     
                     <Element elementData={data[45]} />

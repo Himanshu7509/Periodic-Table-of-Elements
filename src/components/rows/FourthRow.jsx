@@ -4,8 +4,8 @@ export default function FourthRow({ data }){
     return(
         <div className="">
 
-            <div className="flex">
-                <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+            <div className="flex flex-col md:flex-row">
+                <div className="w-full md:w-1/2 md:grid md:grid-cols-9">
                     
                     <Element elementData={data[18]} />
                     <Element elementData={data[19]} />
@@ -18,7 +18,7 @@ export default function FourthRow({ data }){
                     <Element elementData={data[26]} />
 
                 </div>
-                <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+                <div className="w-full md:w-1/2 md:grid md:grid-cols-9">
                     <Element elementData={data[27]} />
                     <Element elementData={data[28]} />
                     <Element elementData={data[29]} />

@@ -71,17 +71,17 @@ export default function Element({ elementData, series, from }) {
       style={isFocused && elementData ? hoverStyle : style}
     >
       {from && (
-        <div className={`border ${darkModeBorder} py-6 m-0`}>
-          <h1 className="font-bold text-white">{from} </h1>
-          <p className="text-xs tracking-tighter text-white">{series}</p>
+        <div className={`border ${darkModeBorder} py-3 md:py-6 m-0`}>
+          <h1 className="font-bold text-white text-sm md:text-base">{from} </h1>
+          <p className="text-[10px] md:text-xs tracking-tighter text-white">{series}</p>
         </div>
       )}
 
       {elementData && (
-        <div className={`border  ${darkModeBorder} py-4 m-0`}>
-          <p className={`text-xs text-white`}>{elementData.number}</p>
-          <h1 className="font-bold text-white">{elementData.symbol} </h1>
-          <p className="text-xs tracking-tighter text-white">
+        <div className={`border  ${darkModeBorder} py-2 md:py-4 m-0`}>
+          <p className={`text-[10px] md:text-xs text-white`}>{elementData.number}</p>
+          <h1 className="font-bold text-white text-sm md:text-base">{elementData.symbol} </h1>
+          <p className="text-[10px] md:text-xs tracking-tighter text-white truncate">
             {elementData.name}
           </p>
         </div>

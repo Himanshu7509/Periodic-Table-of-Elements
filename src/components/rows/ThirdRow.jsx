@@ -4,24 +4,24 @@ export default function ThirdRow({ data }){
     return(
         <div className="">
 
-            <div className="flex">
-                <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
+            <div className="flex flex-col md:flex-row">
+                <div className="w-full md:w-1/2 md:grid md:grid-cols-9">
                     <Element elementData={data[10]} />
                     <Element elementData={data[11]} />
-                    <div className=""> </div>
+                    <div className="hidden md:block"> </div>
                     
-                    <div className=""> </div>
-                    <div className=""> </div>
-                    <div className="">  </div>
-                    <div className="">  </div>
-                    <div className=""> </div>
-                    <div className="">  </div>
+                    <div className="hidden md:block"> </div>
+                    <div className="hidden md:block"> </div>
+                    <div className="hidden md:block">  </div>
+                    <div className="hidden md:block">  </div>
+                    <div className="hidden md:block"> </div>
+                    <div className="hidden md:block">  </div>
 
                 </div>
-                <div className="md:w-1/2 w-full md:grid md:grid-cols-9">
-                    <div className="">  </div>
-                    <div className="">  </div>
-                    <div className=""> </div>
+                <div className="w-full md:w-1/2 md:grid md:grid-cols-9">
+                    <div className="hidden md:block">  </div>
+                    <div className="hidden md:block">  </div>
+                    <div className="hidden md:block"> </div>
                     
                     <Element elementData={data[12]} />
                     <Element elementData={data[13]} />

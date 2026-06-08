@@ -29,7 +29,7 @@ export default function Table() {
 
   return (
     <ModalContext.Provider value={toggleModal}>
-      <div className="py-4 px-4">
+      <div className="py-4 px-4 md:px-8 max-w-7xl mx-auto">
         <Modal open={open} toggleModal={toggleModal} modalData={modalData} />
 
         <h2 className={`md:hidden py-2 text-${groupColor} font-semibold`}>

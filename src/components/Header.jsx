@@ -8,12 +8,15 @@ export default function Header({ toggleDarkMode }) {
     const isDarkMode = useContext(ThemeContext)
 
     let fontColor = isDarkMode ? "text-white" : "text-slate-800"
+    let headerBg = isDarkMode ? "bg-slate-800/80 backdrop-blur-md border-b border-slate-600/50 shadow-lg" : "bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-lg"
 
     return (
-        <div className={ isDarkMode? `bg-slate-700 border-b border-slate-400`: `bg-slate-100 border-b border-slate-200` }>
-                <div className="flex justify-around py-4 ">
-                    <h1 className={`text-xl font-bold ${fontColor}`}>The Periodic Table of Elements</h1>
-                    <span className="cursor-pointer">
+        <div className={headerBg}>
+                <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+                    <h1 className={`text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent`}>
+                        The Periodic Table of Elements
+                    </h1>
+                    <span className="cursor-pointer hover:scale-110 transition-transform duration-200">
                     <DarkModeSwitch
                         checked={isDarkMode}
                         onChange={toggleDarkMode}
